@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Reserve | Exquisite Flavors, Timeless Heritage</title>
+
+    <!-- Bootstrap 5.3.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Google Fonts: EB Garamond (serif) + Be Vietnam Pro (sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Our own styles -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- =========================================================
+         HEADER / NAVIGATION
+         ========================================================= -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid max-width-container px-lg-5">
+
+                <!-- Logo -->
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+                    <i class="bi bi-cup-hot-fill text-mahogany fs-3"></i>
+                    <h1 class="font-serif">The Reserve</h1>
+                </a>
+
+                <!-- Mobile menu toggle -->
+                <button class="navbar-toggler border-0" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navContent"
+                        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="bi bi-list fs-1 text-dark"></i>
+                </button>
+
+                <!-- Navigation links -->
+                <div class="collapse navbar-collapse justify-content-end" id="navContent">
+                    <ul class="navbar-nav align-items-md-center mt-3 mt-md-0 text-center text-md-start">
+                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item ms-md-3 mt-3 mt-md-0">
+                            <button class="btn btn-mahogany w-100" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                                Book Now
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- =====================================================
+             HERO SECTION
+             ===================================================== -->
+        <section id="home" class="hero-section">
+            <div class="hero-bg">
+                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUzaxiQRPV2N5u5w5cwcfOkzMV_8st_9qRsMaQUOuocmGy-PmwBtoHDVZCTLhKM3_FTfIhQa18mhUV7PQFzQC8GGzUtwq7KhxcZYSSmYCLNSbXvRP16k4q2GwdcxcFITWrQuOYcKxrvpaTT9mMiTV1x0l-Rs3e_Inf7CaiZkh8pBLWJgIdGGICPNJPvc9D49RuCqHOeDS6zCHNz0rxDfvJvwt5NN18K-gv9enwnx02dhd2xiKlxlCC5OxGnHVMcF9B2ORq2y232Qo" alt="Seared fine food at The Reserve">
+                <div class="scrim-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <span class="label-caps d-block mb-3 animate-fade-in">Established 1984</span>
+                <h2 class="animate-fade-in">Exquisite Flavors, Timeless Heritage</h2>
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center animate-fade-in">
+                    <button class="btn btn-mahogany px-5 py-3" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        Book a Table
+                    </button>
+                    <a href="#menu" class="btn btn-outline-custom text-white border-white px-5 py-3 text-decoration-none">
+                        Explore Menu
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             MENU SECTION
+             ===================================================== -->
+        <section id="menu" class="py-5 section-spaced">
+            <div class="container py-4">
+
+                <!-- Heading -->
+                <div class="text-center mb-5 section-header">
+                    <span class="label-caps text-mahogany">Signature Experience</span>
+                    <h3 class="mt-2 mb-3">The Seasonal Curation</h3>
+                    <div class="divider-line"></div>
+                </div>
+
+                <!--  WEEK 3: these filter buttons need JavaScript, so they are
+                     parked for now. Un-comment the block below in the JS lesson.
+                <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+                    <button class="category-chip active" data-filter="all">All Curation</button>
+                    <button class="category-chip" data-filter="signature">Chef's Signature</button>
+                    <button class="category-chip" data-filter="seafood">Deep Sea</button>
+                    <button class="category-chip" data-filter="mains">Heritage Mains</button>
+                    <button class="category-chip" data-filter="vegetarian">Botanical Choices</button>
+                </div>
+                -->
+
+                <!-- =========================================================
+                     🎓 STUDENT TASK 1 — SEASONAL CURATION GRID  (Bootstrap)
+                     Build the menu as a responsive Bootstrap grid. ONE finished
+                     card is given below as your model. Dish data + image links
+                     are in STUDENT-TASKS.md. Match the screenshot on the board.
+                     Work through the tiers in order — do as many as you can.
+
+                       🟢 GUIDED  — Copy the EXAMPLE card to add 2 more dishes
+                          (Truffle Risotto, Filet Mignon) so the row shows 3
+                          cards side-by-side on a laptop.
+                            • "col-12 col-md-4"  = full width on phones,
+                              one-third width on medium screens and up.
+                            • "g-4" on the row   = the gap between cards.
+
+                       🟡 BUILD   — No copying. Rebuild a card's column from
+                          memory, then check it against the example. Be ready to
+                          say WHY the wrapper needs "row g-4" and each card needs
+                          a "col-*". Try changing "col-md-4" to "col-md-6" — what
+                          happens, and why?
+
+                       🔴 RESEARCH — Add the 2 extra dishes (Lavender Duck,
+                          Botanical Tart). Then look up the Bootstrap "ratio"
+                          helper OR the Bootstrap "card" component and write 2
+                          lines comparing it to our custom .menu-card.
+                     ========================================================= -->
+                <div class="row g-4" id="menu-container">
+
+                    <!-- ⭐ EXAMPLE CARD — this is your model. Copy this whole
+                         <div class="col..."> block for each new dish and just
+                         swap the image, title, price and description. -->
+                    <div class="col-12 col-md-4 menu-col">
+                        <div class="menu-card">
+                            <div class="menu-img-container">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-LDzOWMYdkfTuG-FBvALrrbH2OsjLXc4ykbac5EIs8G7E0ulGl7y0M2Yuysm_zr2OnTvT8RVf00h_vdRNhm66L_UMNfnoGCh0hou16V63vmPCSLT9nkR8IDUhi9yMyCYMxHoHGRU0-6Q1lLOGHE7r20Cjf4fiS_8NP6SHCibYij_kDcVwJCyJ0WvZRu_BcFg0CWcS7Y7g1bVrp9kUBRNLl0KEsdXj2bGHlAviUvlyHSgFersBPpiYk-dHt8MnwskWv1yyB5yYTPQ" alt="Pan-Seared Scallops">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h4 class="menu-title">Pan-Seared Scallops</h4>
+                                <span class="menu-price">$28</span>
+                            </div>
+                            <p class="menu-desc">Succulent scallops with pea puree</p>
+                        </div>
+                    </div>
+
+                    <!-- 🟢 TODO: add the "Truffle Risotto" card here -->
+<div class="col-12 col-md-4 menu-col">
+                        <div class="menu-card">
+                            <div class="menu-img-container">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsjojyPVVXXDxz3_OAlPxDqq0WSTMkHPQovyIs7dk4TZOdxvq5OlfAFoLffWL9WmJpfCdl6ZwgOJosjYi_VH7hF8WG3gZ5GVvsZFD1pE9imMZzvAuq7nqwcUqG26Tr60dryVUKvV_Kjg_gbzoOhMkNVyKWvxL42CuuhOgbDjd1BPMHfvb0sFAqAbwu4Bz88vYalkPhEaFvbYTPrYlOkbfZ2oLCSWlrS-z09cVnfRtA4sSV51W7ut5smqJ0qSkRl9dGVPvDfHUwYb0" alt="Pan-Seared Scallops">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h4 class="menu-title">Truffle Risotto</h4>
+                                <span class="menu-price">$34</span>
+                            </div>
+                            <p class="menu-desc">Creamy arborio rice with black truffle</p>
+                        </div>
+                    </div>
+
+                    <!-- 🟢 TODO: add the "Filet Mignon" card here -->
+<div class="col-12 col-md-4 menu-col">
+                        <div class="menu-card">
+                            <div class="menu-img-container">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBI7_AOZmmnZIewpy1NgZxRmDnVudMDzpsMStL2IpYADVH9Ik8GjFDbLPYoSjXe_PZi6koctbyC3Wy0acY3NvAf8iUdpSR15XV8902deiFfB3FbOSrQVhFh97PkjDEWyj3Q9wqt1Pb4lpwKprpLfjF_SNEhybVfzLK8LnZEJ8IKV2rocxg5I6zL2Ula1BHm8zG02Q2Nn6461DY44NUM6FNJlDK4DZGXz9jVzm9MOpZjNRxg0rcGi5qVgeIyjP0HVc9-DWOjEXbgIlg" alt="Pan-Seared Scallops">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h4 class="menu-title">Filet Mignon</h4>
+                                <span class="menu-price">$42</span>
+                            </div>
+                            <p class="menu-desc">Grass-fed beef with rosemary butter</p>
+                        </div>
+                    </div>
+
+                    <!-- 🔴 TODO (research): add "Lavender Glazed Duck" + "Botanical Garden Tart" -->
+
+                    <div class="col-12 col-md-4 menu-col">
+                        <div class="menu-card">
+                            <div class="menu-img-container">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUzaxiQRPV2N5u5w5cwcfOkzMV_8st_9qRsMaQUOuocmGy-PmwBtoHDVZCTLhKM3_FTfIhQa18mhUV7PQFzQC8GGzUtwq7KhxcZYSSmYCLNSbXvRP16k4q2GwdcxcFITWrQuOYcKxrvpaTT9mMiTV1x0l-Rs3e_Inf7CaiZkh8pBLWJgIdGGICPNJPvc9D49RuCqHOeDS6zCHNz0rxDfvJvwt5NN18K-gv9enwnx02dhd2xiKlxlCC5OxGnHVMcF9B2ORq2y232Qo" alt="Pan-Seared Scallops">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h4 class="menu-title">Lavender Glazed Duck</h4>
+                                <span class="menu-price">$38</span>
+                            </div>
+                            <p class="menu-desc">Oak-grilled duck breast with cherry reductions</p>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4 menu-col">
+                        <div class="menu-card">
+                            <div class="menu-img-container">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsjojyPVVXXDxz3_OAlPxDqq0WSTMkHPQovyIs7dk4TZOdxvq5OlfAFoLffWL9WmJpfCdl6ZwgOJosjYi_VH7hF8WG3gZ5GVvsZFD1pE9imMZzvAuq7nqwcUqG26Tr60dryVUKvV_Kjg_gbzoOhMkNVyKWvxL42CuuhOgbDjd1BPMHfvb0sFAqAbwu4Bz88vYalkPhEaFvbYTPrYlOkbfZ2oLCSWlrS-z09cVnfRtA4sSV51W7ut5smqJ0qSkRl9dGVPvDfHUwYb0" alt="Pan-Seared Scallops">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-baseline mb-1">
+                                <h4 class="menu-title">Botanical Garden Tart</h4>
+                                <span class="menu-price">$16</span>
+                            </div>
+                            <p class="menu-desc">Handcrafted shortbread pastry with local elderberry cream</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 🔜 WEEK 3: the "View Full Dinner Menu" toggle needs JavaScript.
+                     For now we simply show every dish above. Un-comment in the JS lesson.
+                <div class="text-center mt-5">
+                    <button id="toggle-full-menu" class="btn btn-link text-decoration-none label-caps link-dark border-bottom border-dark pb-1">
+                        View Full Dinner Menu
+                    </button>
+                </div>
+                -->
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT SECTION
+             ===================================================== -->
+        <section id="about" class="py-5 bg-cream-dark" style="padding-top: 6rem !important; padding-bottom: 6rem !important;">
+            <div class="container">
+                <div class="row align-items-center g-5">
+
+                    <!-- Text -->
+                    <div class="col-12 col-lg-6 order-2 order-lg-1">
+                        <span class="label-caps text-mahogany d-block mb-3">Our Story</span>
+                        <h3 class="font-serif mb-4" style="font-size: clamp(2rem, 3.5vw, 2.75rem); line-height: 1.2;">
+                            Culinary Tradition Meets Modern Sophistication
+                        </h3>
+                        <p class="mb-4 text-secondary-emphasis fw-light" style="font-size: 1.1rem; line-height: 1.7;">
+                            Since its inception, The Reserve has remained committed to the art of the meal. We believe that fine dining is more than just nutrition; it's a sensory journey that honors the heritage of our ingredients while embracing modern culinary techniques.
+                        </p>
+                        <p class="text-secondary-emphasis fw-light" style="font-size: 1.1rem; line-height: 1.7;">
+                            Our kitchen is a sanctuary where locally sourced produce and traditional recipes are elevated by the precision of modern gastronomy. Every plate tells a story of the farmers, the seasons, and our unyielding pursuit of culinary excellence.
+                        </p>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="col-12 col-lg-6 order-1 order-lg-2 position-relative">
+                        <div class="decorative-outline-box d-none d-md-block"></div>
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQf6OeZX7qgiMoE92n6jsLfQVkt_8JULQ_Rw9KXw5t4pJm6SCLZCq5-FI9AdOKLAABxwY_RIJvGO4IH5nEwUmvAixEDdchR1wPoja_rboGvR3zXnW-hpnUG-5tj4_rzgW1rnl-cWVI1ko5Q2rt8uKdTKJk_JuWaMAC0dMT8OTxWtUcb7UG1ntRm_LICoxYFRA2lK2Tc3IWDQp2Qv61w_cZ2TNXTfCNvijjeJtjh5V_dD_wQJhl97CBnhhlBhm_eHTf_JY2v0ZlxEQ"
+                             alt="The Reserve Kitchen" class="img-fluid w-100 shadow-lg"
+                             style="object-fit: cover; height: 480px; border-radius: 4px;">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             YOUR BOOKINGS (saved in the browser)
+             ===================================================== -->
+        <section class="py-5 bg-cream-lowest border-top border-bottom">
+            <div class="container text-center">
+                <div class="max-width-800">
+                    <span class="label-caps text-mahogany">Manage Reservations</span>
+                    <h3 class="font-serif mt-2 mb-3">Your Bookings</h3>
+                    <p class="text-muted mb-4 small">
+                        Any tables reserved from this browser are listed below. You can update or cancel bookings.
+                    </p>
+
+                    <!-- Shown when there are no bookings yet -->
+                    <div id="no-bookings" class="p-4 border border-dashed rounded text-muted">
+                        <i class="bi bi-calendar-event d-block mb-2 fs-2"></i>
+                        No current bookings registered in this session. Click "Book Now" in the header to lock in your seasonal table.
+                    </div>
+
+                    <!-- Booking cards get added here by JavaScript -->
+                    <div id="active-bookings-list" class="row justify-content-center g-3 d-none"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT SECTION
+             ===================================================== -->
+        <section id="contact" class="py-5 section-spaced">
+            <div class="container py-4">
+
+                <div class="text-center mb-5 max-width-600">
+                    <h3 class="font-serif" style="font-size: clamp(2rem, 3.5vw, 2.75rem);">Inquiries &amp; Reservations</h3>
+                    <div class="divider-line"></div>
+                    <p class="text-muted fst-italic">We welcome your presence. Please allow 24 hours for a personal response.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-7">
+                        <form id="contactForm" class="mt-4">
+                            <div class="row g-4">
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating-custom">
+                                        <input type="text" id="contactName" placeholder=" " required>
+                                        <label for="contactName">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <div class="form-floating-custom">
+                                        <input type="email" id="contactEmail" placeholder=" " required>
+                                        <label for="contactEmail">Email Address</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating-custom">
+                                        <textarea id="contactMessage" rows="4" placeholder=" " required></textarea>
+                                        <label for="contactMessage">Your Message</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-5">
+                                <button type="submit" id="btn-submit-contact" class="btn btn-mahogany px-5 py-3">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <!-- 🎓 STUDENT TASK 2 — FOOTER  (CSS practice)
+         The HTML structure below is finished for you, but it has NO styling
+         yet, so it looks plain. Your job is to WRITE THE CSS in
+         css/styles.css under "SECTION 15 — FOOTER (YOUR TASK)".
+         Use the screenshot on the board as your target. -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+
+                <!-- Column 1: brand + address -->
+                <div class="footer-col footer-brand">
+                    <h2 class="font-serif">The Reserve</h2>
+                    <p>124 Heritage Way, Gastronomy District</p>
+                </div>
+
+                <!-- Column 2: links + copyright -->
+                <div class="footer-col footer-center">
+                    <nav class="footer-links">
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Privacy Policy</a>
+                    </nav>
+                    <p class="footer-copy">
+                        &copy; <span id="current-year">2026</span> The Reserve. All rights reserved.
+                    </p>
+                </div>
+
+                <!-- Column 3: contact -->
+                <div class="footer-col footer-contact">
+                    <a href="mailto:concierge@thereserve.com" class="footer-social" title="Mail concierge">
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back-to-top button (revealed by JavaScript once you scroll down) -->
+    <button class="btn-scroll-top" id="backToTopBtn" title="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+
+    <!-- =========================================================
+         MODAL: BOOKING FORM
+         ========================================================= -->
+    <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+
+                <div class="modal-header d-flex flex-column align-items-center text-center p-4">
+                    <span class="label-caps text-mahogany mb-1">Live Calendar</span>
+                    <h3 class="modal-title font-serif" id="bookingModalLabel" style="font-size: 1.75rem;">Reserve Your Presence</h3>
+                    <p class="text-muted mb-0 small">Secure an extraordinary table for up to 10 guests below</p>
+                    <button type="button" class="btn-close position-absolute end-0 top-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4 p-md-5 pt-2">
+                    <form id="reservationForm">
+
+                        <div class="form-floating-custom">
+                            <input type="text" id="reserveName" placeholder=" " required>
+                            <label for="reserveName">Full Name</label>
+                        </div>
+
+                        <div class="form-floating-custom">
+                            <input type="email" id="reserveEmail" placeholder=" " required>
+                            <label for="reserveEmail">Email Address</label>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="form-floating-custom">
+                                    <input type="date" id="reserveDate" placeholder=" " required>
+                                    <label for="reserveDate">Date</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating-custom">
+                                    <select id="reserveTime" required>
+                                        <option value="" disabled selected></option>
+                                        <option value="5:00 PM">5:00 PM (Sunset Sitting)</option>
+                                        <option value="6:30 PM">6:30 PM</option>
+                                        <option value="7:00 PM">7:00 PM (Signature Sitting)</option>
+                                        <option value="8:30 PM">8:30 PM</option>
+                                        <option value="9:00 PM">9:00 PM (Late Sitting)</option>
+                                    </select>
+                                    <label for="reserveTime">Preferable Time</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="form-floating-custom">
+                                    <select id="reserveGuests" required>
+                                        <option value="" disabled selected></option>
+                                        <option value="1">1 Guest</option>
+                                        <option value="2">2 Guests</option>
+                                        <option value="3">3 Guests</option>
+                                        <option value="4">4 Guests</option>
+                                        <option value="5">5 Guests</option>
+                                        <option value="6">6 Guests</option>
+                                        <option value="7">7 Guests</option>
+                                        <option value="8">8 Guests</option>
+                                        <option value="9">9 Guests</option>
+                                        <option value="10">10 Guests</option>
+                                    </select>
+                                    <label for="reserveGuests">Party Size</label>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-floating-custom">
+                                    <select id="reserveDietary">
+                                        <option value="None" selected>None</option>
+                                        <option value="Vegetarian">Vegetarian</option>
+                                        <option value="Vegan">Vegan</option>
+                                        <option value="Gluten Free">Gluten Free</option>
+                                        <option value="Nut Free">Nut Allergies</option>
+                                    </select>
+                                    <label for="reserveDietary">Dietary Needs</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-floating-custom mb-4">
+                            <textarea id="reserveNotes" rows="2" placeholder=" "></textarea>
+                            <label for="reserveNotes">Special Requests (Optional)</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-mahogany w-100 py-3 label-caps">
+                            Confirm Reservation
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- =========================================================
+         MODAL: MENU ITEM DETAILS
+         🔜 WEEK 3: JavaScript fills this pop-up in when a menu card is
+         clicked, so it is parked for now. Un-comment in the JS lesson.
+         ========================================================= -->
+    <!--
+    <div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+
+                <div class="modal-header align-items-center p-4">
+                    <h3 class="modal-title font-serif" id="itemModalLabel" style="font-size: 1.5rem;">Dish Blueprint</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-4 pt-2">
+                    <div class="rounded overflow-hidden mb-3" style="max-height: 280px;">
+                        <img id="detailImg" src="" alt="" class="w-100 h-100" style="object-fit: cover;">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-baseline mt-3">
+                        <h4 id="detailTitle" class="font-serif text-dark" style="font-size: 1.6rem;">Dish Title</h4>
+                        <span id="detailPrice" class="menu-price" style="font-size: 1.25rem;">$00</span>
+                    </div>
+                    <p id="detailDescShort" class="text-secondary fst-italic mb-3">Short overview description</p>
+                    <hr class="my-3">
+                    <p id="detailDescLong" class="text-muted small">Deep botanical story and historical recipe insights.</p>
+                </div>
+
+                <div class="modal-footer p-3 justify-content-center">
+                    <button class="btn btn-mahogany px-5 btn-sm" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                        Book Table to Enjoy
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    -->
+
+
+    <!-- Bootstrap 5.3.3 JavaScript bundle (includes Popper for modals/dropdowns) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 🔜 WEEK 3 (JavaScript lesson): un-comment the line below and the page
+         comes to life — menu filtering, detail pop-ups, and booking saving. -->
+    <!-- <script src="js/script.js"></script> -->
+
+</body>
+</html>
