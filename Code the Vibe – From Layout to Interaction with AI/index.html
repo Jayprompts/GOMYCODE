@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aura Studio - Premium Audio Showcase Gallery featuring 3D hover effects, smooth theme transitions, and interactive product details.">
+  <title>Aura Audio — Product Showcase Gallery</title>
+
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow Elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <div class="page-wrapper">
+    <!-- Header Navigation -->
+    <header class="navbar">
+      <div class="nav-brand">
+        <span class="brand-logo">✦</span>
+        <span class="brand-name">AURA<span class="brand-accent">AUDIO</span></span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#products" class="nav-link active">Collection</a>
+        <a href="#technology" class="nav-link">Technology</a>
+        <a href="#experience" class="nav-link">Experience</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Cart Counter Widget -->
+        <button class="cart-btn" id="cartBtn" aria-label="Shopping Cart">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+          <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Main Showcase Section -->
+    <main class="showcase-section" id="products">
+      <!-- Section Title & Intro -->
+      <div class="section-intro fade-in-element">
+        <span class="eyebrow">Pure Precision Acoustics</span>
+        <h1 class="headline">Engineered For <span class="gradient-text">Audiophiles</span></h1>
+        <p class="subheadline">Experience spatial depth and wireless freedom with our award-winning acoustic architecture.</p>
+      </div>
+
+      <!-- 3-Card Product Gallery Grid -->
+      <div class="product-grid" id="productGrid">
+        <!-- Card 1: Horizon ANC -->
+        <article class="product-card fade-in-card" data-delay="1" data-product-id="1">
+          <div class="card-badge">Flagship</div>
+          <div class="image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=700&auto=format&fit=crop&q=80" 
+              alt="Aura Horizon ANC Wireless Headphones" 
+              class="product-img"
+              loading="lazy"
+            />
+            <div class="quick-view-overlay">
+              <button class="quick-view-btn" data-id="1">Quick View</button>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="rating-row">
+              <div class="stars">★★★★★</div>
+              <span class="rating-count">4.9 (420 reviews)</span>
+            </div>
+
+            <h2 class="product-title">Aura Horizon ANC</h2>
+            <p class="product-subtitle">Adaptive active noise-cancellation with 40mm beryllium acoustic drivers.</p>
+
+            <div class="color-options">
+              <span class="color-dot active" style="--dot-color: #0f172a;" title="Midnight Obsidian"></span>
+              <span class="color-dot" style="--dot-color: #64748b;" title="Slate Grey"></span>
+              <span class="color-dot" style="--dot-color: #f1f5f9;" title="Polar Silver"></span>
+            </div>
+
+            <div class="card-footer">
+              <div class="price-box">
+                <span class="currency">$</span>
+                <span class="price-value">349</span>
+              </div>
+              <button class="add-to-cart-btn" data-id="1" data-name="Aura Horizon ANC" data-price="349">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: Pods Ultra (Featured) -->
+        <article class="product-card featured-card fade-in-card" data-delay="2" data-product-id="2">
+          <div class="card-badge popular-badge">Best Seller</div>
+          <div class="image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=700&auto=format&fit=crop&q=80" 
+              alt="Aura Pods Ultra Wireless Earbuds" 
+              class="product-img"
+              loading="lazy"
+            />
+            <div class="quick-view-overlay">
+              <button class="quick-view-btn" data-id="2">Quick View</button>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="rating-row">
+              <div class="stars">★★★★★</div>
+              <span class="rating-count">5.0 (890 reviews)</span>
+            </div>
+
+            <h2 class="product-title">Aura Pods Ultra</h2>
+            <p class="product-subtitle">Spatial 360° immersion with wireless magnetic fast-charging cradle.</p>
+
+            <div class="color-options">
+              <span class="color-dot active" style="--dot-color: #ffffff;" title="Ceramic White"></span>
+              <span class="color-dot" style="--dot-color: #1e293b;" title="Matte Black"></span>
+              <span class="color-dot" style="--dot-color: #6366f1;" title="Cyber Indigo"></span>
+            </div>
+
+            <div class="card-footer">
+              <div class="price-box">
+                <span class="currency">$</span>
+                <span class="price-value">199</span>
+              </div>
+              <button class="add-to-cart-btn primary-action" data-id="2" data-name="Aura Pods Ultra" data-price="199">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Pulse Soundbar -->
+        <article class="product-card fade-in-card" data-delay="3" data-product-id="3">
+          <div class="card-badge">New Arrival</div>
+          <div class="image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1545454675-3531b543be5d?w=700&auto=format&fit=crop&q=80" 
+              alt="Aura Pulse Hi-Fi Studio Soundbar" 
+              class="product-img"
+              loading="lazy"
+            />
+            <div class="quick-view-overlay">
+              <button class="quick-view-btn" data-id="3">Quick View</button>
+            </div>
+          </div>
+
+          <div class="card-body">
+            <div class="rating-row">
+              <div class="stars">★★★★☆</div>
+              <span class="rating-count">4.8 (215 reviews)</span>
+            </div>
+
+            <h2 class="product-title">Aura Pulse Studio</h2>
+            <p class="product-subtitle">High-fidelity desktop soundbar with dual passive radiators and USB-C DAC.</p>
+
+            <div class="color-options">
+              <span class="color-dot active" style="--dot-color: #334155;" title="Gunmetal"></span>
+              <span class="color-dot" style="--dot-color: #0f172a;" title="Carbon Black"></span>
+            </div>
+
+            <div class="card-footer">
+              <div class="price-box">
+                <span class="currency">$</span>
+                <span class="price-value">279</span>
+              </div>
+              <button class="add-to-cart-btn" data-id="3" data-name="Aura Pulse Studio" data-price="279">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="btn-icon">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                <span>Add to Cart</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <p>© <span id="year"></span> AURA AUDIO. Built with pure HTML, CSS, and JavaScript.</p>
+    </footer>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+    <div class="toast-icon">✓</div>
+    <span class="toast-message" id="toastMessage">Item added to cart!</span>
+  </div>
+
+  <!-- Quick View Modal -->
+  <dialog class="modal-dialog" id="quickViewModal">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeModalBtn" aria-label="Close modal">✕</button>
+      <div class="modal-content" id="modalDynamicContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

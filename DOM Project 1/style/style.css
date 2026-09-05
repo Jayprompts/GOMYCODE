@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+i {
+  font-size: 35px;
+  cursor: pointer;
+  margin: 0 10px;
+  color: black;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+i:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.shopping-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e7e7e7;
+  border-radius: 10px;
+  padding: 3%;
+  margin: 50px 0;
+}
+
+.total-price span {
+  font-size: 30px;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.list-products {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 70%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  padding: 5%;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity {
+  font-size: 25px;
+}
+
+.card-body div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.fa-trash-alt {
+  color: #de6b5c;
+}
+
+/* Liked state for heart icon */
+.fa-heart.liked {
+  color: red !important;
+}
