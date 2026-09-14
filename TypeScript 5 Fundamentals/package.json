@@ -1,0 +1,19 @@
+{
+  "name": "typescript-5-fundamentals",
+  "version": "1.0.0",
+  "description": "GoMyCode TypeScript 5 Fundamentals Checkpoint — Vehicle Interface & Car Class",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js"
+  },
+  "keywords": [
+    "typescript",
+    "interfaces",
+    "classes",
+    "oop"
+  ],
+  "author": "",
+  "license": "ISC"
+}
